@@ -1,0 +1,22 @@
+<h2>Book Assign history of {{ book.bookName }}</h2>
+<table class="table table-info table-striped">
+    <thead>
+        <tr>
+            <th> User ID </th>
+            <th> Issue Date </th>
+            <th> Return Date </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let trns of transaction">
+            <td> {{ trns.userId }} </td>
+            <td> {{ trns.issueDate }} </td>
+            <div *ngIf="trns.returnDate != null">
+                <td> {{ trns.returnDate }} </td>
+            </div>
+            <div *ngIf="trns.returnDate === null">
+                <td> Book not returned yet </td>
+            </div>
+        </tr>
+    </tbody>
+</table>

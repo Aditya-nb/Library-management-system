@@ -1,0 +1,8 @@
+<div class="container">
+    <p class="home">Library Management System</p><br><br>
+    <h6>created by Harshvardhan, Aditya and Madhur</h6>
+    <br><br>
+<br><br>
+    <h1 *ngIf="userService.roleMatch(['Admin'])">This is Admin Dashboard</h1>
+    <h1 *ngIf="userService.roleMatch(['User'])">This is User Dashboard</h1>
+</div>
